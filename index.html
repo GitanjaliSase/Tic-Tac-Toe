@@ -6,19 +6,31 @@
     <title>Document</title>
     <style>
         body{
-
+          background-color:aliceblue;
+          margin: 0;
+          padding: 0;
         }
-        .box{
-
+        .board{
+            border:1px solid #ffff;
+            width:fit-content;
+            margin:40px auto;
+            background-color: aqua;
         }
         .row{
-
+            display: flex;
+        }
+        .box{
+            background-color: #fff;
+            height: 100px;
+            width: 100px;
+            margin: 5px;
         }
 
     </style>
 </head>
 <body>
     <h1>Tic Tac Toe</h1>
+<div class="board">
     <div class="row">
         <div class="box"></div>
         <div class="box"></div>
@@ -34,11 +46,12 @@
         <div class="box"></div>
         <div class="box"></div>
     </div>
+</div>
     <script>
         const board=[-1,-1,-1,-1,-1,-1,-1,-1,-1];
         function renderBoard(){
             const allBoxes=document.querySelectorAll('.box');
-
+               allBoxes.forEach((boxElement,i))
         }
     </script>
 </body>
