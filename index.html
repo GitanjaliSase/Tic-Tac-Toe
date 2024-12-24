@@ -24,6 +24,9 @@
             height: 100px;
             width: 100px;
             margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
     </style>
@@ -51,7 +54,13 @@
         const board=[-1,-1,-1,-1,-1,-1,-1,-1,-1];
         function renderBoard(){
             const allBoxes=document.querySelectorAll('.box');
-               allBoxes.forEach((boxElement,i))
+               allBoxes.forEach((boxElement,i)=>{
+                if(board[i]=="0"){
+                    boxElement.innerHTML='<img src="./"'
+
+                    
+                }
+               })
         }
     </script>
 </body>
